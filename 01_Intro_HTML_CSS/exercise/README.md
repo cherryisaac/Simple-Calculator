@@ -71,6 +71,7 @@ After completing this exercise, you'll understand:
 * The page heading must appear inside the appropriate semantic element.
 * The heading text must be centered on the page.
 
+
 ### Image
 
 * Your page must contain an image relevant to the subject, like a book cover, a movie poster, picture of a band, or picture of a team.
