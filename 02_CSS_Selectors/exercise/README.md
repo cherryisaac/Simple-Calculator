@@ -37,7 +37,7 @@ Look at the existing CSS in `style.css` that's set up for you. Take note of the 
 
 The instructions in this exercise ask you to create borders and set colors. Keep these design considerations in mind and refer back to them when needed:
 
-* All borders are 1 pixel wide.
+* All borders are 1 pixel wide.npm
 * Blue: `#00ADEE`
 * Blue Border: `rgba(0, 173, 238, 0.4)`
 * Green: `#8CC36F`
