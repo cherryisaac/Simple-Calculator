@@ -113,6 +113,13 @@ grid-area: picture;
     }
 }
 
+@media screen and (max-width: 450px) {
+    div#experience-grid{
+        display: grid;
+        grid-template-areas: "code" "web" "database" "design";
+    }
+}
+
  #main-grid{
      display: grid;
     align-items:center;
