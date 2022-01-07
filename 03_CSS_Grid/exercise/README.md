@@ -13,7 +13,7 @@ After completing this exercise, you'll understand:
 ## Evaluation criteria and functional requirements
 
 * Your page displays using Live Server within Visual Studio Code.
-* Your page shows different layouts for the screen widths defined in the requirements.
+* Your page shows different layouts for the screen widths defined in the requiremenpm nts.
 * All tests pass as expected.
 
 ## Getting started
