@@ -13,7 +13,11 @@ For each exercise, create the function and implement it inside of `exercises.js`
 		function sumDouble(x, y) {
 			// do logic here
 			// return result;
-			return x + y;
+			if (x == y) {
+				return x + y * 2
+			} else{
+				return x + y;
+			}
 		}
 
 2. **hasTeen** A number is "teen" if it is in the range 13..19 inclusive. Given three int values, return true if 1 or more of them are teen.

@@ -1,7 +1,8 @@
 ﻿let should = chai.should();
 
 describe("exercises", () => {
-  describe("Sum Double", () => {
+  describe("Sum Double", () => { 
+    
     it("should yield 3 when given (1, 2)", () => {
       sumDouble(1, 2).should.equal(3);
     });
