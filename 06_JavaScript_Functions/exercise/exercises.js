@@ -32,16 +32,13 @@
  * @returns {number[]} the filtered array
  */
 
-    function useParameterToFilterArray(result){
+    function useParameterToFilterArray(){
          let unfilteredArray = [1, 2, 3, 4, 5, 6];
-        //  result = [2, 4, 6];
-        if (result = unfilteredArray.filter((results) =>{
-              return results % 2 == 0;
-         }))
-        //  if  (result === unfilteredArray){
-        //       return result % 2 == 0;
-        //  } 
-             return result;
+        return unfilteredArray.filter((e) =>{
+            return (e != unfilteredArray)? e : e % 2 == 0;
+         })
+        
+             
     }
         
         
@@ -84,12 +81,16 @@
  * words and returns them as a new array. Use the `map` function.
  */
     function makeHappy(words){
-        // const element = [words.length];
+        // const element = '';
         // for (let index = 0; index < words.length; index++) {
-        //    return element[index] = 'Happy' + words[index];
+        //    return element += 'Happy' + words[index] + " ";
         // }
         // return element;
-        return words.map(str => 'Happy' + str);
+
+        const result = words.map((str)=> {
+            return "Happy" + str;
+        });
+        return result;
             
     }
 
@@ -110,11 +111,11 @@
  *
  * Use `map` and an anonymous function.
  */
-    function getFullAddressesOfProperties(){
+    function getFullAddressesOfProperties(object, address){
             // const mail = {streetNumber: '180', streetName: 'Walnut', streetType: 'main', city: 'Jamaica', state: 'NY', zip: '11432'};
-            const mail = {objects: [1, 2, 3, 4, 5, 6] , keys:['streetNumber', 'streetName', 'streetType', 'city', 'state', 'zip']};
+            // const mail = {objects: [1, 2, 3, 4, 5, 6] , addrress:['streetNumber', 'streetName', 'streetType', 'city', 'state', 'zip']};
             // return this.streetNumber + " " + this.streetName ," " + this.streetType + " " + this.city + " " + this.state + " " + this.zip;
-            return Object.getOwnPropertyNames(mail);
+            return Object.getOwnPropertyNames(object, address);
             
     }
 
@@ -151,3 +152,6 @@
  *
  * Read the tests to verify you have the correct behavior.
  */
+    function getSumOfSubArrayValues(arr){
+        return (arr == '' || arr == undefined)? 0 : arr.flat().reduce((e,i) => (e + i));
+    }
