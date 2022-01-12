@@ -31,17 +31,12 @@
  * @param {function} filterFunction the function to filter with
  * @returns {number[]} the filtered array
  */
-
-    function useParameterToFilterArray(){
+    function useParameterToFilterArray(cd){
          let unfilteredArray = [1, 2, 3, 4, 5, 6];
         return unfilteredArray.filter((e) =>{
-            return (e != unfilteredArray)? e : e % 2 == 0;
-         })
-        
-             
-    }
-        
-        
+            return (e != unfilteredArray)? true : e % 2 === 0;
+         })       
+    }    
 
 /**
  * Write a function called makeNumber that takes two strings
@@ -88,7 +83,7 @@
         // return element;
 
         const result = words.map((str)=> {
-            return "Happy" + str;
+            return "Happy " + str;
         });
         return result;
             
@@ -111,11 +106,16 @@
  *
  * Use `map` and an anonymous function.
  */
-    function getFullAddressesOfProperties(object, address){
+    function getFullAddressesOfProperties(){
+            const mail = {streetNumber: arguments, streetName: arguments, 
+                streetType: arguments, city: arguments, state: arguments, zip: arguments};
             // const mail = {streetNumber: '180', streetName: 'Walnut', streetType: 'main', city: 'Jamaica', state: 'NY', zip: '11432'};
             // const mail = {objects: [1, 2, 3, 4, 5, 6] , addrress:['streetNumber', 'streetName', 'streetType', 'city', 'state', 'zip']};
             // return this.streetNumber + " " + this.streetName ," " + this.streetType + " " + this.city + " " + this.state + " " + this.zip;
-            return Object.getOwnPropertyNames(object, address);
+              return  mail.map((e)=>{
+                    return e;
+                })
+            // return Object.getOwnPropertyNames(object, address);
             
     }
 
