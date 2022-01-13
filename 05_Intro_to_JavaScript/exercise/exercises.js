@@ -6,7 +6,6 @@
 		sumDouble(3, 2) → 5
 		sumDouble(2, 2) → 8
 		*/
-
 		function sumDouble(x, y) {
 			return (x == y)? (x + y) * 2 : x + y;
 		}
@@ -151,10 +150,10 @@ parameter, `x` passed in.
 	filterMultiplesOfX([3, 5, 1, 9, 18, 21, 42, 67], 3) → [3, 9, 18, 21, 42]
 	filterMultiplesOfX([3, 5, 10, 20, 18, 21, 42, 67], 5) → [5, 10, 20]
 */
-		function filterMultiplesOfX(arr){
+		function filterMultiplesOfX(arr, x){
 			const multiple = [];
 			for (let i = 0; i < arr.length; i++){
-				if(arr[i] % arr == 0){
+				if(arr[i] % x == 0){
 					multiple.push(arr[i]);
 				} 
 			}
