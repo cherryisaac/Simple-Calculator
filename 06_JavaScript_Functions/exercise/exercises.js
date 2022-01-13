@@ -31,11 +31,9 @@
  * @param {function} filterFunction the function to filter with
  * @returns {number[]} the filtered array
  */
-    function useParameterToFilterArray(cd){
-         let unfilteredArray = [1, 2, 3, 4, 5, 6];
-        return unfilteredArray.filter((e) =>{
-            return (e != unfilteredArray)? true : e % 2 === 0;
-         })       
+let unfilteredArray = [1, 2, 3, 4, 5, 6];
+    function useParameterToFilterArray(filterFunction){
+        return unfilteredArray.filter(filterFunction);      
     }    
 
 /**
@@ -51,8 +49,7 @@
  * @returns {number} the resultant number
  */
     function makeNumber(str1, str2){
-        let number = str1.concat(str2);
-        return parseInt(number);
+        return parseInt(str1.concat(str2));
     }
 
 /**
@@ -76,17 +73,7 @@
  * words and returns them as a new array. Use the `map` function.
  */
     function makeHappy(words){
-        // const element = '';
-        // for (let index = 0; index < words.length; index++) {
-        //    return element += 'Happy' + words[index] + " ";
-        // }
-        // return element;
-
-        const result = words.map((str)=> {
-            return "Happy " + str;
-        });
-        return result;
-            
+        return words.map(str => 'Happy ' + str);      
     }
 
 /*
@@ -106,17 +93,9 @@
  *
  * Use `map` and an anonymous function.
  */
-    function getFullAddressesOfProperties(){
-            const mail = {streetNumber: arguments, streetName: arguments, 
-                streetType: arguments, city: arguments, state: arguments, zip: arguments};
-            // const mail = {streetNumber: '180', streetName: 'Walnut', streetType: 'main', city: 'Jamaica', state: 'NY', zip: '11432'};
-            // const mail = {objects: [1, 2, 3, 4, 5, 6] , addrress:['streetNumber', 'streetName', 'streetType', 'city', 'state', 'zip']};
-            // return this.streetNumber + " " + this.streetName ," " + this.streetType + " " + this.city + " " + this.state + " " + this.zip;
-              return  mail.map((e)=>{
-                    return e;
-                })
-            // return Object.getOwnPropertyNames(object, address);
-            
+    function getFullAddressesOfProperties(addresses){
+              return addresses.map(e => e.streetNumber + " " + e.streetName + " " + e.streetType +
+              " " + e.city + " " + e.state + " " + e.zip);
     }
 
 /*
