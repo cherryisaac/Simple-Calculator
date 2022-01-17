@@ -17,14 +17,12 @@
  * This function will loop over the array of groceries that was set above and add them to the DOM.
  */
   function displayGroceries() {
-    let newListItem = document.createElement("li");
-    let node = "";
-  for (const output of groceries) {
-    node = document.createTextNode(output);
-     } 
-    newListItem.appendChild(node);
-    const items = document.querySelectorAll(".shopping-list li");
-    items.appendChild(newListItem);
+    const list = document.querySelector(".shopping-list ul");
+    for (let i = 0; i < groceries.length; i++) {
+      const listItem = document.createElement('li');
+      listItem.innerText = groceries[i];
+      list.insertAdjacentElement('beforeend', listItem);
+    }
 }
 
 /**
@@ -32,8 +30,10 @@
  * to every list item and add the class completed to each one
  */
 function markCompleted() {
-  const items = document.querySelectorAll(".shopping-list li.completed");
-  const title = document.getElementById("title");
+  const listItem = document.querySelectorAll(".shopping-list ul li");
+  listItem.forEach(element => {
+    element.classList.add('completed');
+  });
 }
 
 setPageTitle();
