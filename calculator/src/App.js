@@ -14,7 +14,7 @@ export const ACTIONS = {
 function reducer (state, { type, payload }) {
   switch(type) {
     case ACTIONS.ADD_DIGIT:
-      //Allows for numbers to be overwritten after state has been evaluated(i.e. = sign)
+      //Allows for numbers to be overwritten after state has been evaluated(i.e. "=" sign)
       if(state.overwrite){
         return {
           ...state, 
